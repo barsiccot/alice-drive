@@ -1,0 +1,32 @@
+
+<!--=========================
+ Header
+===========================-->
+<header>
+  <nav id="sticktop" class="navbar navbar-default" style="position:fixed;top:0px" data-sticky="true">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo"/></a> </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li *ngFor="let music of musics"
+            [class.selected]="music === selectedHero"
+            (click)="onSelect(music)">
+            <span class="badge">{{music.id}}</span> {{music.name}}
+          </li>
+
+            <li routerLinkActive="active"><a routerLink="/about">ГЛАВНАЯ</a></li>
+
+          <li routerLinkActive="active"><a routerLink="/news">НОВОСТИ</a></li>
+          <li routerLinkActive="active"><a routerLink="/gallery">ФОТОГАЛЕРЕЯ</a></li>
+
+          <li><a routerLink="/music" routerLinkActive="active">МУЗЫКА</a></li>
+          <li><a routerLink="/media" routerLinkActive="active">ВИДЕО</a></li>
+          <li><a routerLink="/tours">КОНЦЕРТЫ</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </nav>
+</header>

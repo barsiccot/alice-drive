@@ -1,0 +1,54 @@
+  
+  <section id="section_2" class="news_section section_first" >
+    <div class="container animatedParent ">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section_head_widget">
+            <h2 class="animated fadeInDown">poison news</h2>
+            <h5 class="animated fadeInLeft">latest articles</h5>
+          </div>
+        </div>
+        <!--column--> 
+      </div>
+      <!--row--> 
+    </div>
+    <!--contaier-->
+    <div class="news_widget">
+      <div class="container controls_wrapper animatedParent" *ngFor="let news of visibleNews">
+        <div class="carousel_controls"> <span id="news-prev" class="fa fa-angle-left animated fadeInLeft"></span> <span id="news-next" class="fa fa-angle-right animated bounceInRight "></span> </div>
+        <!--controls--> 
+      </div>
+      <!--//controls_wrapper//carousel_overlay-->
+			<div class="col-sm-12 col-xs-6 animatedParent">
+        <div class="news_box fadeInUp animated">
+          <figure><img src="img/n1.jpg" alt="" /></figure>
+          <div class="news_info_wrapper">
+            <div class="news_info">
+              <h5>poison fragnances coming soon</h5>
+              <ul class="news_meta">
+                <li>by POISON</li>
+                <li>Sep 20, 2013</li>
+              </ul>
+              <!--//news_meta-->
+              <h6>3 comments</h6>
+            </div>
+            <!--news_info--> 
+          </div>
+          <!--//news_info_wrapper-->
+          <div class="hover"> 
+              <a class="triggerNews" href="news.html" data-number="1">
+                  Read Full Article
+              </a> 
+            </div>
+          <!--//hover--> 
+        </div>
+				<div class="news_box fadeInUp animated">
+       {{news.content}}
+          <!--//hover--> 
+        </div>
+      </div>
+      <!--//news_carousel--> 
+      
+    </div>
+    <!--//news_widget--> 
+  </section> 

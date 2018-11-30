@@ -1,0 +1,58 @@
+     <section id="section_3" class="newsletter_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+                <h3>we have special news &amp; prizes only <br>
+                  for our biggest poison fans!</h3>
+                <div class="team_prizes"> 
+                    <div class="row">
+                      <div ngFor="let image of visibleImages" id="thumbnailsList" >
+                          <div  *ngFor="let img of image.imageList" class=" animatedParent" >
+                              <figure class="animated fadeInUp go">
+                                                                      
+                                    <label class="col-xs-7 col-sm-5 col-md-4 popup-shower"  style="margin:10px"  for="{{img.id}}" ><a>
+                                      <img src="{{img.url}}" style="height: 180px" ></a></label>
+    
+    
+                              </figure>
+
+                              <div class="popup-wrapper">
+                                  <input type="checkbox" class="popup-checkbox" id="{{img.id}}">
+                                  <div class="popup">
+                                    <div class="popup-content">
+                                      <label for="{{img.id}}" class="popup-closer">&#215;</label>
+                                      <img src="{{img.url}}" style="border: 1px solid #ddd; border-radius: 6px;" >
+                  
+                                    </div>
+                                  </div>
+                                </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+ 
+     
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by larchanka (http://jsbin.com/hohehe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+
+
+  
+ 
+
+   
+   
+   
+   
+   
+
+      

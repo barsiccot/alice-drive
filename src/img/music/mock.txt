@@ -1,0 +1,79 @@
+﻿const MUSICS=[ 
+{"id":1,"category":'2013 Take ALICE DRIVE',"title":"2013 Take ALICE DRIVE","url":"./music/2013 Take ALICE DRIVE/01 Right In My Head.mp3", "imageList": 
+[
+{"id":1,"url":"./music/2013 Take ALICE DRIVE/01 Right In My Head.mp3"}, 
+{"id":2,"url":"./music/2013 Take ALICE DRIVE/02 Destiny.mp3"},
+{"id":3,"url":"./music/2013 Take ALICE DRIVE/03 My Own.mp3"}, 
+{"id":4,"url":"./music/2013 Take ALICE DRIVE/04 Done It.mp3"},
+] 
+}, 
+
+{"id":2,"category":'2016 Take Alice Drive',"title":"2016 Take Alice Drive","url":"./music/2016 Take Alice Drive/01 Let Me Bye.mp3", "imageList": 
+[
+{"id":1,"url":"./music/2016 Take Alice Drive/01 Let Me Bye.mp3"}, 
+{"id":2,"url":"./music/2016 Take Alice Drive/02 Now Or Never.mp3"},
+{"id":3,"url":"./music/2016 Take Alice Drive/03 Somewhere.mp3"}, 
+{"id":4,"url":"./music/2016 Take Alice Drive/04 Burnout.mp3"},
+] 
+}, 
+
+{"id":3,"category":'Covers',"title":"Covers","url":"./music/Covers/Alice Drive-Big City Life -amp- I Knew You Were Trouble -live cover 2013.mp3", "imageList": 
+[
+{"id":1,"url":"./music/Covers/Alice Drive-Big City Life -amp- I Knew You Were Trouble -live cover 2013.mp3"}, 
+{"id":2,"url":"./music/Covers/Alice Drive-Love Me Like You Do -Ellie Goulding cover.mp3"},
+{"id":3,"url":"./music/Covers/Alice Drive-Tik Tok -Kesha cover.mp3"}, 
+] 
+},   
+
+
+{"id":4,"category":'Ledanry',"title":"Ledanry","url":"./music/Ledanry/Alice Drive-Big City Life -amp- I Knew You Were Trouble -live cover 2013.mp3", "imageList": 
+[
+{"id":1,"url":"./music/Ledanry/Ledanry- Don--39-t Fight It -10 Years acoustic cover.mp3"}, 
+{"id":2,"url":"./music/Ledanry/Ledanry-A.N.N.mp3"},
+{"id":3,"url":"./music/Ledanry/Ledanry-All That I--39-m Asking For -Lifehouse cover.mp3"}, 
+{"id":4,"url":"./music/Ledanry/Ledanry-Arms Of A Stranger -12 Stones acoustic cover.mp3"}, 
+{"id":5,"url":"./music/Ledanry/Ledanry-Best I Can -Decyfer Down acoustic cover.mp3"},
+{"id":6,"url":"./music/Ledanry/Ledanry-Desperate.mp3"}, 
+{"id":7,"url":"./music/Ledanry/Ledanry-For The Nights I Can--39-t Remember -Hedley cover.mp3"}, 
+{"id":8,"url":"./music/Ledanry/Ledanry-Gone Too Soon -Simple Plan Acoustic Cover.mp3"},
+{"id":9,"url":"./music/Ledanry/Ledanry-It Is What It It -Lifehouse cover.mp3"}, 
+{"id":10,"url":"./music/Ledanry/Ledanry-Just Call -live 13.01.18.mp3"}, 
+{"id":11,"url":"./music/Ledanry/Ledanry-m.a.r.i.mp3"},
+{"id":12,"url":"./music/Ledanry/Ledanry-Never Too Late -Three Days Grace acousitc cover.mp3"}, 
+{"id":13,"url":"./music/Ledanry/Ledanry-No One Else.mp3"}, 
+{"id":14,"url":"./music/Ledanry/Ledanry-Not Now -acoustic.mp3"},
+{"id":15,"url":"./music/Ledanry/Ledanry-Old School -Hedley acoustic cover LIVE 02.06.2017.mp3"}, 
+{"id":16,"url":"./music/Ledanry/Ledanry-Satellite -Nickelback acoustic live cover- 30.07.17.mp3"}, 
+{"id":17,"url":"./music/Ledanry/Ledanry-Stormy -Hedley acoustic cover.mp3"},
+{"id":18,"url":"./music/Ledanry/Ledanry-The Misguided.mp3"}, 
+{"id":19,"url":"./music/Ledanry/Ledanry-The Order Of Fire.mp3"},
+{"id":20,"url":"./music/Ledanry/Ledanry-With Me -Sum41 acoustic cover.mp3"}, 
+{"id":21,"url":"./music/Ledanry/Ledanry-Your Love Is A Lie -Simple Plan acoustic cover.mp3"}
+] 
+}, 
+
+
+{"id":5,"category":'Live records ALICE DRIVE',"title":"Live records ALICE DRIVE","url":"./music/Live records ALICE DRIVE/Alice Drive-01 Destiny -Rehearsal live 2014.mp3", "imageList": 
+[
+{"id":1,"url":"./music/Live records ALICE DRIVE/Alice Drive-01 Destiny -Rehearsal live 2014.mp3"}, 
+{"id":2,"url":"./music/Live records ALICE DRIVE/Alice Drive-02 My Own -Rehearsal live 2014.mp3"},
+{"id":3,"url":"./music/Live records ALICE DRIVE/Alice Drive-03 Burnout -Rehearsal live 2014.mp3"}, 
+{"id":4,"url":"./music/Live records ALICE DRIVE/Alice Drive-04 Done It -Rehearsal live 2014.mp3"}, 
+{"id":5,"url":"./music/Live records ALICE DRIVE/Alice Drive-05 Somewhere -Rehearsal live 2014.mp3"},
+{"id":6,"url":"./music/Live records ALICE DRIVE/Alice Drive-06 Let Me Bye -Rehearsal live 2014.mp3"}, 
+{"id":7,"url":"./music/Live records ALICE DRIVE/Alice Drive-07 Now Or Never -Rehearsal live 2014.mp3"}, 
+{"id":8,"url":"./music/Live records ALICE DRIVE/Alice Drive-08 Right In My Head -Rehearsal live 2014.mp3"},
+{"id":9,"url":"./music/Live records ALICE DRIVE/Alice Drive-My Own -Acoustic Live Session 2013.mp3"}, 
+] 
+}, 
+
+{"id":5,"category":'Без крыльев',"title":"Без крыльев","url":"./music/Без крыльев/1.jpeg", "imageList": 
+[
+{"id":1,"url":"./music/Без крыльев/Elli Noise-Harder To Breathe -Maroon 5 Live Cover.mp3"}, 
+{"id":2,"url":"./music/Без крыльев/Elli Noise-Inside of me.mp3"},
+{"id":3,"url":"./music/Без крыльев/Elli Noise-Без крыльев.mp3"}, 
+{"id":4,"url":"./music/Без крыльев/Elli Noise-Ночью.mp3"}, 
+{"id":5,"url":"./music/Без крыльев/Elli Noise-Я Уйду.mp3"},
+}, 
+
+]

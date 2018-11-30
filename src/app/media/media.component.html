@@ -1,0 +1,215 @@
+
+
+
+
+
+
+
+
+
+ <!--=============
+    Music Tracks
+    ===============-->
+    <script>
+        $('audio').removeClass('icon-stop');
+
+  $('audio').mediaelementplayer({
+features: ['playpause','progress','current','tracks','fullscreen']
+});
+</script>
+  <ul class="thumbs noscript">
+    <li *ngFor="let music of music$ | async"
+      [class.selected]="music.id === selectedId">
+      <a [routerLink]="[music.id]">
+      <span class="badge">{{ music.id }}</span>{{ music.name }}
+      </a>
+    </li>
+    </ul>
+
+  <section id="section_5" class="track_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8">
+            <div class="section_head_widget animatedParent ">
+              <h2 class="animated fadeInLeft">poison Music</h2>
+              <h5 class="animated bounceInRight">All Albums</h5>
+            </div>
+            <!--section_head_widget--> 
+          </div>
+          <div class="col-xs-12 col-sm-4 text-right">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  2014 <span class="fa fa-caret-down"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a [class.active]="filterBy=='newYear2017'" (click)="filterBy='newYear2017'">2013</a></li>
+                    <li><a [class.active]="filterBy=='newYear2017'" (click)="filterBy='newYear2016'">2012</a></li>
+                    <li><a [class.active]="filterBy=='newYear2017'" (click)="filterBy='newYear2015'">2011</a></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+        <!--row-->
+        <div class="row tracks_widget">
+
+            <div class="col-xs-12 col-sm-4 text-right">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    2014 <span class="fa fa-caret-down"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                      <li><a [class.active]="filterBy=='newYear2017'" (click)="filterBy='newYear2017'">2013</a></li>
+                      <li><a [class.active]="filterBy=='newYear2017'" (click)="filterBy='newYear2016'">2012</a></li>
+                      <li><a [class.active]="filterBy=='newYear2017'" (click)="filterBy='newYear2015'">2011</a></li>
+                    </ul>
+                </div>
+            </div>
+          <div class="col-sm-4 col-xs-12 animatedParent"  *ngFor="let medias of (visibleMedias | mediaFilter:filterBy)">
+            <div style="float:left" class="col-sm-6 col-xs-6 track_box animated fadeInUp go">
+
+                 <!--column-->
+                 <figure class="animated fadeInUp go"> 
+
+                 <video controls style="width:400px">
+                   
+                     <source src="{{medias.url}}" [class.active]="filterBy=='newYear2017'" type='video/ogg; codecs="theora, vorbis"'>
+                      <source src="{{medias.url}}" [class.active]="filterBy=='newYear2017'" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                      <source src="{{medias.url}}" [class.active]="filterBy=='newYear2017'" type='video/webm; codecs="vp8, vorbis"'>
+                      Тег video не поддерживается вашим браузером.
+                     </video>
+                 </figure>
+              
+                 </div>
+            <!--//news_box--> 
+          </div>
+     
+         
+          <!--column-->
+              
+      </div>
+      <div class="clearfix"></div>
+      <!--=============================tracks-Details=========================-->
+      <div class="trackLoading"><i class="fa fa-spin fa-refresh"></i></div>
+      <section id="tracksAjaxWrapper" class="container">
+        <a class="closeTrackAjax" href="#section_5"><i class="fa fa-times"></i></a>
+          <div id="tracksAjax" class="content_expander music_widget">
+        </div>
+      </section>
+      
+      
+      <!--//tracks-Details-->
+            
+      <div class="container">
+        <ul class="channels_list row animatedParent ">
+          <li class="col-xs-12 col-sm-4 animated fadeInLeft"><a href="#"><i class="fa fa-circular fa-music"></i>poison itunes</a></li>
+          <li class="col-xs-12 col-sm-4 animated fadeInLeft"><a href="#"><i class="fa fa-soundcloud"></i>poison soundcloud</a></li>
+          <li class="col-xs-12 col-sm-4 animated fadeInLeft"><a href="#"><i class="fa fa-youtube"></i>poison youtube</a></li>
+        </ul>
+     </div>
+     </div>
+     </section>
+  
+
+
+ 
+
+
+
+
+
+
+     <style id="jsbin-css">
+        .popup-checkbox, .popup {
+          display: none;
+        }
+        
+        .popup {
+          position: fixed;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+        
+        .popup:before {
+          display: block;
+          content: ' ';
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #000;
+          opacity: .5;
+        }
+        
+        .popup-content {
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          padding: 20px;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        
+        .popup-checkbox:checked + .popup {
+          opacity: 1;
+          display: block;
+        }
+        
+        .popup-shower {
+          color: #00f;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        
+        .popup-shower:hover {
+          color: #00a;
+          text-decoration: underline;
+        }
+        
+        .popup-closer {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          color: #999;
+          font-size: 20px;
+          border: 1px solid #999;
+          display: block;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+        .popup-closer:hover {
+          background-color: #eee;
+        }
+        </style>
+
+
+
+
+
+
+
+
+
+
+
+
+

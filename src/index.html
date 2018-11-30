@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular QuickStart</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+    <!--Plugins CSS Files-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.vegas.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <link rel="stylesheet" type="text/css" href="css/bigvideo.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <!--custom styles for Poison-->
+    <link rel="stylesheet" href="css/main.css">
+    
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/colors/color1.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/color2.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/color3.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/color4.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/color5.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/color6.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/color7.css">
+    -->
+    
+    
+    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#sticktop" data-offset="70">
+    <!--=====================================
+    Preloader
+    ========================================-->
+    
+    <my-app></my-app>
+    <!--===================================================================
+    Scripts
+    ====================================================================--> 
+    
+    <script src="js/jquery-1.11.0.min.js"></script> 
+    <script src="js/jpreloader.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/jquery.easing-1.3.pack.js"></script> 
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script> 
+    <script src="js/jquery.carouFredSel-6.2.1-packed.js"></script> 
+    <script src="js/tweetie.min.js"></script> 
+    <script src="js/jquery.sticky.js"></script> 
+    <script src="js/jquery.jplayer.min.js"></script> 
+    <script src="js/jplayer.playlist.min.js"></script> 
+    <script src="js/jquery.vegas.min.js"></script> 
+    <script src="js/css3-animate-it.js"></script> 
+    <script src="js/jquery.fractionslider.min.js"></script> 
+    <script src="js/jquery.mCustomScrollbar.min.js"></script> 
+    <script src="js/jquery.waitforimages.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/bigvideo.js"></script>
+    <script src="js/main.js"></script>  
+    <script language = "JavaScript">
+        var timer = null;
+        var delay = 2000;
+        var ar_src = new Array();
+        function setBigImageSlide(group) {
+          var group = document.getElementById(group);
+          var images = group.childNodes;
+          var src = new Array();
+          var k = 0;
+          for (var i = 0; i < images.length; i++) {
+            if (images[i] instanceof HTMLImageElement) {
+              src[k] = images[i].src;
+              k++;
+            }
+          }
+          ar_src = src;
+          if (timer != null) clearTimeout(timer);
+          imagesSlide(0);
+        }
+        function imagesSlide(i) {
+          var image = document.getElementById("bigimgslide");
+          image.src = ar_src[i];
+          i++;
+          if (i == ar_src.length) i = 0;
+          timer = setTimeout("imagesSlide(" + i + ")", delay);
+        }
+      </script>
+
+    </body>
+</html>

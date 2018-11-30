@@ -1,0 +1,76 @@
+
+
+<section  class="news_section section_first">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <div class="section_head_widget animatedParent">
+          <h5 class="animated bounceInUp">photos &amp; videos</h5>
+        </div>
+      </div>
+      <div style="width:200px">
+               </div>
+
+      <!--section_head_widget--> 
+    </div>
+    <!--row-->
+    
+    <div class="row media_widget">
+     
+      <div class="col-xs-6 col-sm-4 col-md-3 animatedParent" *ngFor="let image of visibleImages">
+     
+               
+                <figure class="animated fadeInUp go"> 
+                    <a [routerLink]="['/image',image.id]" >
+                      <img src="{{image.url}}" style="height: 180px" [class.active]="filterBy=='newYear2017'"  >
+                    </a>
+                    <figcaption>
+                      <h6>{{image.title}}</h6>
+                      {{image.imageList.length}} photos </figcaption>
+                  </figure>        
+       
+        <!--figure--> 
+      </div>
+      <!--Column / media item--> 
+      
+    </div>
+  </div>
+  <!--container--> 
+</section>
+
+
+
+
+
+<style>
+            
+    .modalDialog {
+    
+    position: fixed;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    
+    top: 0;
+    
+    right: 0;
+    
+    bottom: 0;
+    
+    left: 0;
+    
+    background: rgba(0,0,0,0.8);
+    
+    z-index: 99999;
+    
+    -webkit-transition: opacity 400ms ease-in;
+    
+    -moz-transition: opacity 400ms ease-in;
+    
+    transition: opacity 400ms ease-in;
+    display: none;
+    
+    pointer-events: none;
+    
+    }
+    
+    </style>

@@ -1,0 +1,19 @@
+nav{
+    font-family: 'Lato', sans-serif;
+    background-color:#424242;
+}
+.logo {
+    color:#fff;
+    font-family:'Lato',sans-serif;
+}
+
+ul.nav a{
+
+}
+ul.nav a:hover{
+
+}
+
+.active>a{
+ backround-color: #616161
+}

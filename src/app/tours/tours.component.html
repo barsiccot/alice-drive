@@ -1,0 +1,55 @@
+     <!--======================================
+    Tours Section
+    ==========================================-->
+  
+    <section id="section_9" class="tours_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="section_head_widget">
+                <h2>poison tours</h2>
+                <h5>all tours this year</h5>
+              </div>
+            </div>
+            <!--section_head_widget--> 
+          </div>
+          <!--row-->
+      
+          <div class="tours_widget">
+            <div class="tour_row_header">
+              <div class="column_one"> Date </div>
+              <div class="column_two"> &nbsp;<!--no header for picture column--> 
+              </div>
+              <div class="column_three"> Location </div>
+              <div class="column_four"> Venue </div>
+              <div class="column_five"> Notes </div>
+              <div class="column_six"> Tickets </div>
+            </div>
+            <div class="tour_row animatedParent"  *ngFor="let tour of visibleTours">
+               <div class="animated fadeInDownShort">
+                <div class="column_one">
+                  <span>10/10/14</span>
+                </div>
+                <div class="column_two"> 
+                    <img src="{{tour.url}}" routerLink="/tour-details" /> </div>
+                <div class="column_three" routerLink="/tour-details">{{tour.content}} </div>
+                <div class="column_four">{{tour.title}} </div>
+                <div class="column_five"> {{tour.content}} </div>
+                <div class="column_six"> 
+                    <a class="btn btn_buy_ticket"  [routerLink]="['/tour',tour.id]" >
+                    Подробней</a> </div>
+              </div>
+            </div>
+            <!--tour row-->
+            
+        
+            <!--tour row-->
+            
+    
+       
+            <!--tour row--> 
+          </div>
+        </div>
+        <!--container--> 
+      </section>
+      <!--//tours--> 

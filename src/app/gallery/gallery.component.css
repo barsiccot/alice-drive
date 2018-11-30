@@ -1,0 +1,24 @@
+nav{
+    font-family: 'Lato', sans-serif;
+    background-color:#424242;
+}
+.logo {
+    color:#fff;
+    font-family:'Lato',sans-serif;
+}
+
+.active>a{
+ backround-color: #616161
+}
+.tn{
+    margin:6px;
+    border: 4px solid #eee;
+    box-shadow: #0000 1px 8px 1px;
+    height: 50px;
+}
+li{
+    display: inline;
+}
+ul{
+    padding: 0;width:1200px; margin:20px auto;
+}

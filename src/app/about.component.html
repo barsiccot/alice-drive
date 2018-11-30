@@ -1,0 +1,187 @@
+
+              
+              <banner-component></banner-component>
+
+              //news
+              <section class="news_section section_first">
+                <div class="container animatedParent ">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="section_head_widget">
+                        <h2 class="animated fadeInDown">poison news</h2>
+                        <h5 class="animated fadeInLeft">latest articles</h5>
+                      </div>
+                    </div>
+                    <!--column--> 
+                  </div>
+                  <!--row--> 
+                </div>
+                <!--contaier-->
+                <div class="news_widget">
+                  <div class="container controls_wrapper animatedParent ">
+                    <div class="carousel_controls"> <span id="news-prev" class="fa fa-angle-left animated fadeInLeft"></span> <span id="news-next" class="fa fa-angle-right animated bounceInRight "></span> </div>
+                    <!--controls--> 
+                  </div>
+                  <!--//controls_wrapper//carousel_overlay-->
+                  <div class="col-sm-12 col-xs-6 animatedParent">
+                    <div class="news_box fadeInUp animated">
+                      <figure><img src="img/n1.jpg" alt="" /></figure>
+                      <div class="news_info_wrapper">
+                        <div class="news_info">
+                          <h5>poison fragnances coming soon</h5>
+                          <ul class="news_meta">
+                            <li>by POISON</li>
+                            <li>Sep 20, 2013</li>
+                          </ul>
+                          <!--//news_meta-->
+                          <h6>3 comments</h6>
+                        </div>
+                        <!--news_info--> 
+                      </div>
+                      <!--//news_info_wrapper-->
+                      <div class="hover"> 
+                          <a class="triggerNews" href="news.html" data-number="1">
+                              Read Full Article
+                          </a> 
+                        </div>
+                      <!--//hover--> 
+                    </div>
+                    <div class="news_box fadeInUp animated">
+                   пвщлрвщрвдао
+                      <!--//hover--> 
+                    </div>
+                  </div>
+                  <!--//news_carousel--> 
+                  
+                </div>
+                <!--//news_widget--> 
+              </section> 
+                <music-component></music-component>
+             // gallery
+
+             
+<section  class="news_section section_first">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <div class="section_head_widget animatedParent">
+          <h5 class="animated bounceInUp">photos &amp; videos</h5>
+        </div>
+      </div>
+      <div style="width:200px">
+               </div>
+
+      <!--section_head_widget--> 
+    </div>
+    <!--row-->
+    
+    <div class="row media_widget">
+     
+      <div class="col-xs-6 col-sm-4 col-md-3 animatedParent" *ngFor="let image of visibleImages; let i=index">
+     
+               
+                <figure class="animated fadeInUp go" *ngIf="i<4"> 
+                    <a [routerLink]="['/image',image.id]" >
+                      <img src="{{image.url}}" style="height: 180px" [class.active]="filterBy=='newYear2017'"  >
+                    </a>
+                    <figcaption>
+                      <h6>{{image.title}}</h6>
+                       photos </figcaption>
+                  </figure>        
+       
+        <!--figure--> 
+      </div>
+      <!--Column / media item--> 
+      <a href="/gallery">Смотреть больше</a>
+    </div>
+  </div>
+  <!--container--> 
+</section>
+
+                <band-component></band-component>
+        
+    <section  class="tours_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section_head_widget">
+              <h2>poison tours</h2>
+              <h5>all tours this year</h5>
+            </div>
+          </div>
+          <!--section_head_widget--> 
+        </div>
+        <!--row-->
+    
+        <div class="tours_widget">
+          <div class="tour_row_header">
+            <div class="column_one"> Date </div>
+            <div class="column_two"> &nbsp;<!--no header for picture column--> 
+            </div>
+            <div class="column_three"> Location </div>
+            <div class="column_four"> Venue </div>
+            <div class="column_five"> Notes </div>
+            <div class="column_six"> Tickets </div>
+          </div>
+          <div class=" animatedParent"  *ngFor="let tour of visibleTours;let i=index">
+             <div class="tour_row animated fadeInDownShort" *ngIf="i<4">
+              <div class="column_one">
+                <span>10/10/14</span>
+              </div>
+              <div class="column_two"> 
+                  <img src="{{tour.url}}" routerLink="/tour-details" /> </div>
+              <div class="column_three" routerLink="/tour-details">{{tour.content}} </div>
+              <div class="column_four">{{tour.title}} </div>
+              <div class="column_five"> {{tour.content}} </div>
+              <div class="column_six"> 
+                  <a class="btn btn_buy_ticket"  [routerLink]="['/tour',tour.id]" >
+                  Подробней</a> </div>
+            </div>
+          </div>
+          <!--tour row-->
+          
+      
+          <!--tour row-->
+          
+  
+     
+          <!--tour row--> 
+        </div>
+      </div>
+      <!--container--> 
+    </section>
+<style>
+            
+  .modalDialog {
+  
+  position: fixed;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  
+  top: 0;
+  
+  right: 0;
+  
+  bottom: 0;
+  
+  left: 0;
+  
+  background: rgba(0,0,0,0.8);
+  
+  z-index: 99999;
+  
+  -webkit-transition: opacity 400ms ease-in;
+  
+  -moz-transition: opacity 400ms ease-in;
+  
+  transition: opacity 400ms ease-in;
+  display: none;
+  
+  pointer-events: none;
+  
+  }
+  
+  </style>
+
+      
+          
